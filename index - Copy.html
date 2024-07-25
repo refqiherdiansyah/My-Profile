@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header,
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #23527c;
+        }
+
+        .container {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section {
+            margin-bottom: 2rem;
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #337ab7;
+        }
+
+        .profile-picture {
+            max-width: 150px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .paragraph {
+            text-align: justify;
+        }
+
+        .certification-grid,
+        .experience-grid,
+        .blog-grid,
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 1rem;
+        }
+
+        .certification-item,
+        .experience-item,
+        .blog-item,
+        .skill-item {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 1rem;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .certification-item:hover,
+        .experience-item:hover,
+        .blog-item:hover,
+        .skill-item:hover {
+            transform: scale(1.05);
+        }
+
+        .certification-image,
+        .experience-image,
+        .blog-image,
+        .skill-image {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+
+        .social-icons a {
+            color: white;
+            margin: 0 0.5rem;
+            text-decoration: none;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #23527c;
+        }
+
+        .project-upload {
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .project-upload input[type="file"] {
+            display: none;
+        }
+
+        .project-upload label,
+        .upload-button label {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background-color: #337ab7;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .project-upload label:hover,
+        .upload-button label:hover {
+            background-color: #23527c;
+        }
+
+        .cv-button {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background-color: #337ab7;
+            color: white;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .cv-button:hover {
+            background-color: #23527c;
+        }
+
+        .skills-section {
+            background: linear-gradient(135deg, #e2ebf0 25%, #cfd9df 25%, #cfd9df 50%, #e2ebf0 50%, #e2ebf0 75%, #cfd9df 75%, #cfd9df 100%);
+            background-size: 56.57px 56.57px;
+            padding: 2rem;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome To My Profile</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#certifications">Certifications & Licenses</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <section class="section about" id="about">
+            <h2 class="section-title">About Me</h2>
+            <img src="refqi.jpg" alt="Profile Picture" class="profile-picture">
+            <p class="paragraph">
+                Saya seorang mahasiswa tahun kedua di Universitas Muhammadiyah Malang yang sedang mencari kesempatan magang di berbagai posisi. Saya adalah seorang profesional yang berdedikasi dengan keahlian dalam pelayanan pelanggan, manajemen waktu, dan pemantauan tren. Saya mahir dalam Microsoft Office serta dalam pemecahan masalah dan pengembangan solusi yang efektif. Saya juga memiliki kemampuan komunikasi verbal dan tertulis yang baik serta latar belakang yang kuat dalam membangun hubungan positif dan mencapai tujuan.
+            </p>
+            <h3>Keterangan dalam Tiga Bahasa:</h3>
+            <ul>
+                <li><strong>Arab:</strong>أنا طالب في السنة الثانية في جامعة المحمدية مالانج، أبحث عن فرص تدريب في مناصب مختلفة.</li>
+                <li><strong>Inggris:</strong>I am a second-year student at the University of Muhammadiyah Malang seeking internship opportunities across various positions.</li>
+                <li><strong>Indonesia:</strong> Saya mahasiswa tahun kedua di Universitas Muhammadiyah Malang, sedang mencari kesempatan magang dalam berbagai posisi.</li>
+            </ul>
+            <a href="Refqy Herdiansyah (3).pdf" target="_blank" class="cv-button">Download CV/Resume</a>
+        </section>
+        <section class="section skills-section" id="skills">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <img src="Html.png" alt="HTML" class="skill-image">
+                    <h3>HTML</h3>
+                </div>
+                <div class="skill-item">
+                    <img src="CSS.jpeg" alt="CSS" class="skill-image">
+                    <h3>CSS</h3>
+                </div>
+                <div class="skill-item">
+                    <img src="Java Script.png" alt="JavaScript" class="skill-image">
+                    <h3>JavaScript</h3>
+                </div>
+                <div class="skill-item">
+                    <img src="Microsoft Office.jpeg" alt="Microsoft Office" class="skill-image">
+                    <h3>Microsoft Office</h3>
+                </div>
+                <div class="skill-item">
+                    <img src="Time Management.webp" alt="Time Management" class="skill-image">
+                    <h3>Time Management</h3>
+                </div>
+                <div class="skill-item">
+                    <img src="Problem Solving.WEBP" alt="Problem Solving" class="skill-image">
+                    <h3>Problem Solving</h3>
+                </div>
+                <div class="skill-item">
+                    <img src="Costumer Service.jpeg" alt="Customer Service" class="skill-image">
+                    <h3>Customer Service</h3>
+                </div>
+            </div>
+        </section>
+        <section class="section certifications" id="certifications">
+            <h2 class="section-title">Certifications & Licenses</h2>
+            <div class="certification-grid">
+                <div class="certification-item">
+                    <img src="Certificate Of Project.jpg" alt="Certificate Of Project" class="certification-image">
+                    <h3 class="certification-title">Certificate Of Project</h3>
+                </div>
+                <div class="certification-item">
+                    <img src="Certificate Of Digital Marketing.jpg" alt="Certificate Of Digital Marketing" class="certification-image">
+                    <h3 class="certification-title">Certificate Of Digital Marketing</h3>
+                </div>
+                <div class="certification-item">
+                    <img src="Certificate Of Microsoft Project.jpg" alt="Certificate Of Microsoft Project" class="certification-image">
+                    <h3 class="certification-title">Certificate Of Microsoft Project</h3>
+                </div>
+                <div class="certification-item">
+                    <img src="Certificate Of Microsoft Excel.jpg" alt="Certificate Of Microsoft Excel" class="certification-image">
+                    <h3 class="certification-title">Certificate Of Microsoft Excel</h3>
+                </div>
+                <div class="certification-item">
+                    <img src="Certificate Of Morosoft Word.jpg" alt="Certificate Of Morosoft Word" class="certification-image">
+                    <h3 class="certification-title">Certificate Of Morosoft Word</h3>
+                </div>
+                <div class="certification-item">
+                    <img src="Certificate Of Microsoft Power Point .jpg" alt="Certificate Of Morosoft Power Point" class="certification-image">
+                    <h3 class="certification-title">Certificate Of Morosoft Word</h3>
+                </div>
+            </div>
+        </section>
+        <section class="section experience" id="experience">
+            <h2 class="section-title">Experience</h2>
+            <div class="experience-grid">
+                <div class="experience-item">
+                    <img src="cover logo umm.jpeg" alt="Asistent Dosen" class="experience-image">
+                    <h3 class="experience-title">Asistent Dosen</h3>
+                </div>
+                <div class="experience-item">
+                    <img src="proses.jpg" alt="Experience 2" class="experience-image">
+                    <h3 class="experience-title">proses</h3>
+                </div>
+                <div class="experience-item">
+                    <img src="images/experience-3.jpg" alt="Experience 3" class="experience-image">
+                    <h3 class="experience-title">proses</h3>
+                </div>
+            </div>
+        </section>
+        <section class="section projects" id="projects">
+            <h2 class="section-title">Projects</h2>
+            <div class="project-upload">
+                <form>
+                    <input type="file" id="projectFile" accept=".zip,.rar">
+                    <label for="projectFile">Upload Project File</label>
+                </form>
+            </div>
+        </section>
+        <section class="section blog" id="blog">
+            <h2 class="section-title">Blog</h2>
+            <div class="blog-grid">
+                <div class="blog-item">
+                    <img src="images/blog-1.jpg" alt="Blog Post 1" class="blog-image">
+                    <h3 class="blog-title">proses</h3>
+                    <p class="blog-description">This is a description of blog post 1.</p>
+                </div>
+                <div class="blog-item">
+                    <img src="images/blog-2.jpg" alt="Blog Post 2" class="blog-image">
+                    <h3 class="blog-title">proses</h3>
+                    <p class="blog-description">This is a description of blog post 2.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <nav class="nav-container">
+            <ul class="nav-list">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#certifications">Certifications & Licenses</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/refqi-herdiansyah-42027a2a7" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/refqi_herdiansyah" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/6285282568462" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </nav>
+    </footer>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Profile picture hover animation
+            const profilePicture = document.querySelector('.profile-picture');
+            profilePicture.addEventListener('mouseenter', function () {
+                profilePicture.style.transform = 'scale(1.1)';
+            });
+            profilePicture.addEventListener('mouseleave', function () {
+                profilePicture.style.transform = 'scale(1)';
+            });
+
+            // GSAP animations for certifications and experiences
+            gsap.from('.certification-item', {
+                scrollTrigger: {
+                    trigger: '.certifications',
+                    start: 'top 80%',
+                    end: 'bottom 20%',
+                    scrub: true
+                },
+                opacity: 0,
+                y: 50,
+                stagger: 0.3,
+                duration: 1,
+                ease: 'power2.out'
+            });
+
+            gsap.from('.experience-item', {
+                scrollTrigger: {
+                    trigger: '.experience',
+                    start: 'top 80%',
+                    end: 'bottom 20%',
+                    scrub: true
+                },
+                opacity: 0,
+                y: 50,
+                stagger: 0.3,
+                duration: 1,
+                ease: 'power2.out'
+            });
+
+            // GSAP animations for blog items
+            gsap.from('.blog-item', {
+                scrollTrigger: {
+                    trigger: '.blog',
+                    start: 'top 80%',
+                    end: 'bottom 20%',
+                    scrub: true
+                },
+                opacity: 0,
+                y: 50,
+                stagger: 0.3,
+                duration: 1,
+                ease: 'power2.out'
+            });
+
+            // Custom animations for blog items
+            const blogItems = document.querySelectorAll('.blog-item');
+            blogItems.forEach(function (item) {
+                item.addEventListener('mouseenter', function () {
+                    item.style.transform = 'scale(1.05)';
+                });
+                item.addEventListener('mouseleave', function () {
+                    item.style.transform = 'scale(1)';
+                });
+            });
+
+            // GSAP animation for About section
+            gsap.from('.about', {
+                scrollTrigger: {
+                    trigger: '.about',
+                    start: 'top 80%',
+                    end: 'bottom 20%',
+                    scrub: true
+                },
+                opacity: 0,
+                x: -100,
+                duration: 1,
+                ease: 'power2.out'
+            });
+        });
+    </script>
+</body>
+
+</html>

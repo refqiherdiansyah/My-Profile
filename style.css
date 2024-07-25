@@ -1,0 +1,385 @@
+/* Global Styles */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f6f9;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #1576d8; /* Dark Blue */
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #3498db; /* Light Blue */
+}
+
+a:hover {
+    color: #2980b9; /* Medium Blue */
+}
+
+/* Navigation */
+
+.nav-container {
+    background-color: #2c3e50; /* Dark Blue */
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-list li {
+    margin-right: 20px;
+}
+
+.nav-list a {
+    color: #ecf0f1; /* Light Grey */
+    font-weight: 600;
+}
+
+.nav-list a:hover {
+    color: #bdc3c7; /* Grey */
+}
+
+.nav-toggle {
+    background-color: #2c3e50; /* Dark Blue */
+    border: none;
+    padding: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #ecf0f1; /* Light Grey */
+}
+
+.nav-toggle:hover {
+    background-color: #34495e; /* Slightly Lighter Blue */
+}
+
+.nav-icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url('images/nav-icon.svg');
+    background-size: 24px 24px;
+}
+
+/* Profile Section */
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Sections */
+
+.section {
+    padding: 50px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.section-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #337ab7; /* Dark Blue */
+}
+
+.paragraph {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #7f8c8d; /* Grey */
+}
+
+/* Skills Section */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+.skill-item {
+    background: linear-gradient(135deg, #e0f7fa, #80deea); /* Gradient Background */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.skill-item:hover {
+    transform: scale(1.05);
+}
+
+.skill-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+/* Certifications & Licenses */
+
+.certification-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.certification-item {
+    background-color: #ecf0f1; /* Light Grey */
+    padding: 20px;
+    border: 1px solid #bdc3c7; /* Grey */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.certification-item:hover {
+    transform: scale(1.05);
+}
+
+.certification-image {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.certification-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #3498db; /* Light Blue */
+}
+
+.certification-description {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #7f8c8d; /* Grey */
+}
+
+/* Experience */
+
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.experience-item {
+    background-color: #ecf0f1; /* Light Grey */
+    padding: 20px;
+    border: 1px solid #bdc3c7; /* Grey */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.experience-item:hover {
+    transform: scale(1.05);
+}
+
+.experience-image {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.experience-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #3498db; /* Light Blue */
+}
+
+.experience-description {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #7f8c8d; /* Grey */
+}
+
+/* Projects */
+
+.project-upload {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.project-upload input[type="file"] {
+    display: none;
+}
+
+.project-upload label {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db; /* Light Blue */
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.project-upload label:hover {
+    background-color: #2980b9; /* Medium Blue */
+}
+
+/* Blog */
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.blog-item {
+    background-color: #ecf0f1; /* Light Grey */
+    padding: 20px;
+    border: 1px solid #bdc3c7; /* Grey */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.blog-item:hover {
+    transform: scale(1.05);
+}
+
+.blog-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.blog-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #3498db; /* Light Blue */
+}
+
+.blog-description {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #7f8c8d; /* Grey */
+}
+
+/* Footer */
+
+footer {
+    background-color: #2c3e50; /* Dark Blue */
+    color: #ecf0f1; /* Light Grey */
+    text-align: center;
+    padding: 20px;
+}
+
+.social-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.social-links a {
+    color: #ecf0f1; /* Light Grey */
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 24px;
+}
+
+.social-links a:hover {
+    color: #3498db; /* Light Blue */
+}
+
+.social-links i {
+    margin-right: 5px;
+}
+
+/* Responsive Design */
+
+/* Mobile and Tablet */
+
+@media (max-width: 768px) {
+    .nav-list {
+        flex-direction: column;
+    }
+    .nav-list li {
+        margin-bottom: 10px;
+    }
+    .section {
+        padding: 20px;
+    }
+    .profile-picture {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+/* Laptop and Desktop */
+
+@media (min-width: 1024px) {
+    .nav-container {
+        padding: 20px;
+    }
+    .nav-list {
+        justify-content: space-between;
+    }
+    .nav-list li {
+        margin-right: 40px;
+    }
+    .section {
+        padding: 100px;
+    }
+}
+
+/* File Upload Animation */
+
+@keyframes fileUploadAnimation {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.file-upload-animation {
+    animation: fileUploadAnimation 0.5s ease-in-out;
+}
+
+/* About Section Animation */
+
+@keyframes aboutAnimation {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.about-animation {
+    animation: aboutAnimation 1s ease-in-out;
+}
